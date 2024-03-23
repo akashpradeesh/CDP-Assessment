@@ -100,7 +100,7 @@ export default function Segment({ open, handleClose }) {
                         </IconButton>
                     </div>
                 ))}
-                {<Link color='#75E6DA' style={{ cursor: 'pointer' }} onClick={handleAddSchema}>+Add new schema</Link>}
+                {schema.length < 7 && <Link color='#75E6DA' style={{ cursor: 'pointer' }} onClick={handleAddSchema}>+Add new schema</Link>}
             </Box>
             <Paper sx={{ width: 530, position: 'absolute', bottom: 0, right: 0 }} elevation={1}>
                 <div style={{ padding: '5px', width: 'auto', left: 0, display: 'flex', gap: 15 }}>
