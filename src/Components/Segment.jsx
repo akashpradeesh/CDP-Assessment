@@ -51,6 +51,11 @@ export default function Segment({ open, handleClose }) {
     const handleChangeSegmentName = (event) => {
         setSegmentName(event.target.value)
     }
+    const clearAll = () => {
+        setSchema([])
+        setSegmentName('')
+        handleClose()
+    }
     console.log(schema)
     return (
         <Drawer
@@ -106,7 +111,7 @@ export default function Segment({ open, handleClose }) {
                     >
                         Save the segment
                     </Button>
-                    <Button variant='outlined' color='error' sx={{ float: 'left' }}>Cancel</Button>
+                    <Button variant='outlined' color='error' sx={{ float: 'left' }} onClick={clearAll}>Cancel</Button>
                 </div>
             </Paper>
         </Drawer >)
